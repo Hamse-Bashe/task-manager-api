@@ -39,7 +39,7 @@ if (process.env.NODE_ENV === "development") {
 }
 
 app.use(helmet());
-app.use(limiter)
+app.use(limiter);
 
 // Custom middleware
 // app.use(logger);
@@ -66,8 +66,6 @@ app.use(notFound);
 
 // error handler middleware
 app.use(errorHandler);
-
-
 
 // // POST
 // app.post("/users", (req, res) => {
@@ -108,7 +106,11 @@ app.use(errorHandler);
 
 // connect to database
 mongoose
-  .connect(process.env.NODE_ENV == "development" ? process.env.MONGO_URI_DEV : process.env.MONGO_URI_PRO)
+  .connect(
+    process.env.NODE_ENV == "developmentt"
+      ? process.env.MONGO_URI_DEV
+      : process.env.MONGO_URI_PRO,
+  )
   .then(() => console.log("✅ MongoDb connected locally."))
   .catch((err) => console.log(`❌ Connection error: ${err}`));
 
