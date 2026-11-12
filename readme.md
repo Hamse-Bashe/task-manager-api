@@ -1,0 +1,5 @@
+- [✅]Github initialization
+- [✅]MongoDb atlas
+- []Render Deployment
+- [✅]Environment variables
+- [✅]Git ignore
